@@ -4,7 +4,7 @@ namespace classes;
 
 use classes\exceptions\RouteNotFoundException;
 
-class Router
+class Router //brak phpdoc przed większością funkcji i protperty
 {
     protected mixed $routes;
 
@@ -40,9 +40,9 @@ class Router
         $requestMethod = mb_strtolower($requestMethod);
 
         $route = explode('?', $requestUri)[0];
-        $action = $this->routes[$requestMethod][$route];
+        $action = $this->routes[$requestMethod][$route]; //jeśli ktoś wprowadzi nie prawidłowy uri wystąpi tu błąd undefined array key. Do sprawdzenia za pomocą isset() czy $this->routes[$requestMethod][$route] i tylko jeśli tak to ustawić do $action
 
-        if (! $action)
+        if (! $action) //nie powinno być spacji między wykrzyknikiem a zmienną
         {
             throw new RouteNotFoundException();
         }
@@ -69,4 +69,4 @@ class Router
 
         throw new RouteNotFoundException();
     }
-}
+} //brak ostatniej pustej linii

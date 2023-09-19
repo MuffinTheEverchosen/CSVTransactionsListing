@@ -2,9 +2,9 @@
 
 namespace classes;
 
-use Latte\Engine;
+use Latte\Engine; //Zbędny import
 
-class IndexController
+class IndexController // brak phpdoc przed funkcjami
 {
     public function index(): View
     {

@@ -6,14 +6,14 @@ use classes\exceptions\RouteNotFoundException;
 use PDO;
 use PDOException;
 
-class App
+class App //brak phpdoc przed większością funkcji i property
 {
     private static PDO $db;
     public function __construct(protected Router $router, protected array $request)
     {
         try {
             static::$db = new PDO(
-                'mysql:host=db;dbname=db;', 'db', 'db'
+                'mysql:host=db;dbname=db;', 'db', 'db' //można by wyciągnąć do jakiegoś configa i z tamtąd zaciągać
             );
         } catch (PDOException $exception){
             throw new PDOException($exception->getMessage(), (int)$exception->getCode());

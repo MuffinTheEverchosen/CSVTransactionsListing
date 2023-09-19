@@ -3,11 +3,11 @@
 namespace classes;
 
 use classes\exceptions\ViewNotFoundException;
-use Latte\Engine;
+use Latte\Engine; //zbędny import
 
-class View
+class View //brak phpdoc przed większością funkcji i property
 {
-    protected bool $error;
+    protected bool $error; //nazwa przy zmiennej bool powinna być w formie $isError
 
     public function __construct(protected string $view)
     {
@@ -26,7 +26,7 @@ class View
         $viewPath = VIEW_PATH . '/' . $this->view . '.php';
         $layoutFile = VIEW_PATH . '/template/layout.php';
 
-        if (! file_exists($viewPath))
+        if (! file_exists($viewPath)) //nie powinno być spacji między wykrzyknikiem a funkcją
         {
             throw new ViewNotFoundException;
         }

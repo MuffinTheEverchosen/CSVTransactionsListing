@@ -2,7 +2,7 @@
 
 namespace classes\exceptions;
 
-class InvalidTimeType extends \Exception
+class InvalidTimeType extends \Exception //do zastąpienia \ importem klasy exception: use Exception;
 {
     public function getViewFile(): string
     {

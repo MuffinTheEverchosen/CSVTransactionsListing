@@ -4,7 +4,7 @@ namespace classes;
 
 use classes\values\Transactions;
 
-class DBHandler
+class DBHandler //brak phpdoc
 {
     public static function importTransactions(): void
     {
@@ -12,7 +12,7 @@ class DBHandler
 
         $values = Transactions::getValues();
 
-        foreach ($values as $value)
+        foreach ($values as $value) //można by pomyśleć nad użyciem tranzakcji bazodanowej oraz multiquery aby ograniczyć liczbę zapytań do bazy
         {
             $query = $db->prepare(
                 'INSERT INTO Transactions (Date, CheckNumber, Description, Amount) 

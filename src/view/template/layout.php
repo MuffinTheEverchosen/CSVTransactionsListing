@@ -33,7 +33,7 @@
     </div>
 </nav>
 <main>
-    <?php include $viewPath ?>
+    <?php include $viewPath ?> <!--zmienna viewPath powinna być zadeklarowana na górze pliku w sekcji php. Prawdopodobnie powinna być informacja o typie string w phpdoc tj. @var string $viewPath-->
 </main>
 <footer class="bg-body-tertiary w-100 p-1 d-flex gap-4 fs-5 fixed-bottom">
     <p class="m-0"><span class="text-primary-emphasis">Made By:</span> Marcin Piechowski</p>
