@@ -4,7 +4,7 @@ use classes\App;
 use classes\IndexController;
 use classes\Router;
 use classes\FormController;
-use classes\TransactionHandler;
+use classes\TransactionHandler; //do usunięcia
 
 require __DIR__ . '/../vendor/autoload.php';
 

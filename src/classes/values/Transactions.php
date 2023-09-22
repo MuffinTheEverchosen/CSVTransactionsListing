@@ -6,7 +6,7 @@ use classes\exceptions\InvalidTimeType;
 use classes\exceptions\TooLongDescription;
 use classes\exceptions\TooLongNumber;
 
-class Transactions
+class Transactions //brak phpdoc
 {
     protected static array $values = [];
     public function setValue(string $date, string $check, string $description, string $amount): self
@@ -23,7 +23,7 @@ class Transactions
         @[$day, $month, $year] = explode('/', $date);
 
 
-        if (!checkdate($month, $day, $year))
+        if (!checkdate($month, $day, $year)) //całą sekcję walidacji można wydzielić do osobnej funkcji, gdyż funkcja setValue nie powinna odowiadać za walidację
         {
             throw new InvalidTimeType();
         }

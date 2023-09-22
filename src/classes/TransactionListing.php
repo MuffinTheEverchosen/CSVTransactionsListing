@@ -2,9 +2,9 @@
 
 namespace classes;
 
-use classes\values\Transactions;
+use classes\values\Transactions; //zbędny import
 
-class TransactionListing
+class TransactionListing //brak phpdoc
 {
     public function listTransactions($deletionOption = false): string
     {
